@@ -1,0 +1,3 @@
+_pegas_test:
+    resource: "@PegasTestBundle/Resources/config/routing.yml"
+    prefix: /pegas

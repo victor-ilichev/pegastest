@@ -1,0 +1,19 @@
+{% extends "PegasTestBundle::layout.html.twig" %}
+
+{% block title "Symfony - Demos" %}
+
+
+
+{% block content %}
+    <h1 class="title">Добро пожаловать!</h1>
+    {% block headermenu %}
+        <ul id="demo-list">
+            <li>
+                <a href="{{ path('_pegas_main_page') }}">Главная</a>
+            </li>
+            <li>
+                <a href="{{ path('_user_form_page') }}">Форма</a>
+            </li>
+        </ul>
+    {% endblock headermenu %}
+{% endblock %}

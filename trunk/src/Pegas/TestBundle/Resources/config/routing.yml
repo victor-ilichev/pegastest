@@ -1,0 +1,8 @@
+_pegas_main_page:
+    path: /
+    defaults: {_controller:PegasTestBundle:Main:index}
+
+_pegas_form_sendmail:
+    resource: "@PegasTestBundle/Controller/FormController.php"
+    type: annotation
+    prefix: /userform
