@@ -26,7 +26,7 @@ class FormController extends Controller {
 					->setSubject('Hello Email')
 					->setFrom('pegas@example.com')
 					->setTo($userform->getEmail())
-					->setBody('fgfgdgggdgdg');//->setBody($this->renderView('AdaptiveSiteBundle:Default:email.txt.twig', array('name' => $data['name'], 'message' => $data['message'])))
+					->setBody($this->renderView('PegasTestBundle:Form:email.html.twig', array('formdata' => $form->getData()->getArrayCopy())));
 				
 				$this->get('mailer')->send($message);  
 				return $this->redirect($this->generateUrl('_user_form_email_send_success'));

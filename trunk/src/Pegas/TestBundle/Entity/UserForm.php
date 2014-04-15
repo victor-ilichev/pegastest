@@ -2,8 +2,7 @@
 
 namespace Pegas\TestBundle\Entity;
 
-class UserForm
-{
+class UserForm {
     protected $email;
 
     protected $message;
@@ -22,5 +21,9 @@ class UserForm
 	
     public function setMessage($message) {
         $this->message = $message;
+    }
+	
+	public function getArrayCopy() {
+        return get_object_vars($this);
     }
 }
